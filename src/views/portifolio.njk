@@ -1,0 +1,12 @@
+{% extends "./layout.njk" %}  
+{% block content %}  
+  <main class="repository">
+    {% for repo in data %}
+      <div class="repo">      
+        <h2>Projeto: {{repo.name}}</h2>
+        <p>{{repo.description}}</p>
+        <a href="{{ repo.html_url }}">Visualizar projeto</a>
+      </div>
+    {% endfor %}
+  </main>
+{% endblock %}
